@@ -5,8 +5,8 @@ import { RecoilRoot } from 'recoil'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    // HOC
     <RecoilRoot>
+      {/* Higher Order Component */}
       <AuthProvider>
         <Component {...pageProps} />
       </AuthProvider>

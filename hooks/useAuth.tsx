@@ -32,7 +32,7 @@ interface AuthProviderProps {
   children: React.ReactNode
 }
 
-export const AuthProvider = ({ children }: AuthProviderProps) => {
+export function AuthProvider ({ children }: AuthProviderProps) {
   const router = useRouter()
   const [user, setUser] = useState<User | null>(null)
   const [error, setError] = useState(null)
