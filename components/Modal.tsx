@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useRecoilState } from 'recoil'
 import { modalState, movieState } from '../atoms/modalAtom.'
-import ReactPlayer from 'react-player/lazy'
+// import ReactPlayer from 'react-player/lazy'
+import {default as _ReactPlayer} from 'react-player/lazy';
+import {ReactPlayerProps} from "react-player/types/lib";
+const ReactPlayer = _ReactPlayer as unknown as React.FC<ReactPlayerProps>;
 import { FaPlay } from 'react-icons/fa'
 import {
   CheckIcon,
@@ -126,7 +129,7 @@ function Modal() {
     }
   }
 
-  console.log(addedToList)
+  // console.log(addedToList)
 
   return (
     <MuiModal
